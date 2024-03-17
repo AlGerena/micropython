@@ -343,7 +343,7 @@ static mp_obj_t mp_machine_uart_make_new(const mp_obj_type_t *type, size_t n_arg
     self->rts = UART_PIN_NO_CHANGE;
     self->cts = UART_PIN_NO_CHANGE;
     self->txbuf = 256;
-    self->rxbuf = 256; // IDF minimum
+    self->rxbuf = 130000; // IDF minimum
     self->timeout = 0;
     self->timeout_char = 0;
     self->invert = 0;
